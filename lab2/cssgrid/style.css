@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+body{
+    margin: 0;
+}
+
 h1, p{
     font-family: sans-serif;
     text-transform: uppercase;
@@ -77,4 +81,68 @@ span{
 div{
     border: solid 2px black;
     display: grid;
+}
+
+@media (max-width: 768px) {
+    
+    .ticket{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        padding: 0;
+    }
+
+    .event{
+        grid-column: span 2;
+        grid-row: 2;
+        background-color: black;
+        color: white;
+    }
+
+    .title{
+        grid-column: span 2;
+        grid-row: 1;
+        background-color: black;
+        color: white;  
+    }
+
+    .title h1{
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .qr-code{
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        padding: 3em 0em;
+    }
+
+    .date{
+        border: 2px solid black;
+        border-bottom: 0;
+    }
+
+    .admit-persons{
+        border: 2px solid black;
+        border-bottom: 0;
+        border-left: 0;
+    }
+
+    .date p, .admit-persons p, .price p{
+        font-size: 1.3em;
+    }
+
+    .price{
+        grid-column: span 2;
+        border: solid 2px black;
+    }
+
+    .message{
+        grid-column: span 2;
+        display: none;
+        visibility: hidden;
+    }
+
+    div{
+        border: none;
+    }
 }
