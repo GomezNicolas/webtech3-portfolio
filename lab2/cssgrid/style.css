@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1, p{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    letter-spacing: 0.2em;
+}
+
+span{
+    text-transform: none;
+    font-weight: normal;
+}
+
+.ticket{
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr 1fr 0.5fr;
+    padding: 1em;
+}
+
+.event{
+    grid-column: span 3;
+    border-bottom: 0;
+}
+.event p{
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.title{
+    grid-column: span 3;
+    border-top: 0;
+    border-bottom: 0;
+}
+.title h1{
+    font-size: 4em;
+}
+
+.date p, .admit-persons p, .price p{
+    font-size: 1.5em;
+}
+
+.qr-code{
+    grid-row: 1 / span 4;
+    grid-column: 4;
+    border-left: 0;
+}
+
+.qr-code img{
+    max-width: 70%;
+    align-self: center;
+    justify-self: center;
+}
+
+.admit-persons{
+    border-left: 0;
+    border-right: 0;
+}
+
+.message{
+    grid-column: span 3;
+    border-top: 0;
+}
+.message p{
+    letter-spacing: 0;
+}
+
+div{
+    border: solid 2px black;
+    display: grid;
+}
