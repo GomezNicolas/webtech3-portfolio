@@ -38,10 +38,11 @@ class Note {
       // pressing the enter key should also work
       this.btnAdd = document.querySelector("btnAddNote");
       this.btnAdd.eventlistener("click", this.bind(this));
-      // this.loadNotesFromStorage();
+      this.loadNotesFromStorage();
     }
     
     loadNotesFromStorage() {
+        console.log("code went to 'load notes from storage' function");
       // HINT🤩
       // load all notes from storage here and add them to the screen
       // something like note.add() in a loop would be nice
