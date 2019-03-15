@@ -32,7 +32,12 @@ class Weather{
         })
         //als dat lukt dan ("then") iets doen met die JSON
         .then(json => {
-            console.log(json);
+            //find h2 and h3 for weather description and temperature and fill in the data into innerHTML
+            let summary = document.querySelector(".weather-description");
+            summary.innerHTML = `Current Weather: <span>${json.currently.summary}</span>`;
+            let temp = document.querySelector(".temperature");
+            let roundedTemp = Math.round(json.currently.temperature);
+            temp.innerHTML = `${roundedTemp} °C`;
         })
     }
 }
